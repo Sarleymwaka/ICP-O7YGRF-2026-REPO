@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul id="tasks"></ul>
+
+    <script>
+        async function loadTasks() {
+            const res = await fetch('/api/tasks/');
+            const tasks = await res.json();
+            const ul = document.getElementById('tasks');
+            ul.innerHTML = '';
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.textContent = `${task.title} - ${task.status}`;
+                ul.appendChild(li);
+            });
+        }
+
+        loadTasks();
+    </script>
+</body>
+</html>
