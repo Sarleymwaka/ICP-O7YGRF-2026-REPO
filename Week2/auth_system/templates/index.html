@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth System Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #333; }
+        a { display: block; margin: 20px; font-size: 18px; text-decoration: none; color: white; background-color: #4CAF50; padding: 10px 20px; border-radius: 5px; width: 200px; margin-left: auto; margin-right: auto; }
+        a:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Auth System</h1>
+
+    <a href="{% url 'register.html' %}">Register</a>
+    <a href="{% url 'login.html' %}">Login</a>
+    <a href="{% url 'reset_page' %}">Reset Password</a>
+
+</body>
+</html>
